@@ -10,5 +10,5 @@ var sortColors = function(nums) {
             }
         }
     }
-    return nums
+   // return nums
 };
