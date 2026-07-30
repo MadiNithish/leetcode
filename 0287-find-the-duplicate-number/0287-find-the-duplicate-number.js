@@ -3,20 +3,22 @@
  * @return {number}
  */
 var findDuplicate = function(nums) {
-    // let left = 0;
-    // let right = nums.length-1;
-
-    // while(left<=right){
-    //     let mid = Math.floor((left+right)/2);
-    //     if(nums[mid])
+    // let set = new Set();
+    // for(let num of nums){
+    //     if(set.has(num)){
+    //         return num;
+    //     }else{
+    //         set.add(num);
+    //     }
     // }
 
-    let set = new Set();
+    let map = new Map();
     for(let num of nums){
-        if(set.has(num)){
+        if(map.has(num)){
             return num;
         }else{
-            set.add(num);
+            map.set(num,1);
         }
     }
+
 };
